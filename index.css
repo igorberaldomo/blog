@@ -1,0 +1,67 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+#banner{
+width: 100%;
+height: 100px;
+margin: 0px;
+display: flex;
+align-items: end;
+justify-content: left;
+background-color: blue;
+color: white;
+text-shadow: 1px 1px 3px black;
+box-shadow: -1px 1px 1px black;
+}
+#corpo{
+ background-color: white;
+ width: 100%;
+ height: 100%;
+ margin: auto;
+}
+.cardLine{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.blogCard{
+    height: 400px;
+    width: 300px;
+    flex-direction: column;
+    display: flex;
+    margin: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+
+}
+.img{
+    height: 200px;
+    width: 300px;
+    position: relative;
+    align-items: center;
+    border-radius: 10px 010px 00px 00px
+}
+.subtitulo{
+    margin: 0px;
+    position: relative;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    text-shadow: 1px 1px 3px darkgray;
+    font-size: 25px;
+    
+}
+.descricao{
+    background-color: white;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.562);
+}
