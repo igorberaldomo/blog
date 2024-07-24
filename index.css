@@ -16,11 +16,17 @@ color: white;
 text-shadow: 1px 1px 3px black;
 box-shadow: -1px 1px 1px black;
 }
-#corpo{
+#corpoCards{
  background-color: white;
  width: 100%;
  height: 100%;
- margin: auto;
+}
+.invisibleButton{
+    border: none;
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    margin: 40px;
 }
 .cardLine{
     display: flex;
@@ -29,39 +35,73 @@ box-shadow: -1px 1px 1px black;
     margin: 10px;
     align-items: center;
     justify-content: center;
+
 }
 .blogCard{
     height: 400px;
     width: 300px;
     flex-direction: column;
     display: flex;
-    margin: 40px;
+    position: relative;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 4px black;
 
 }
 .img{
+    display: flex;
     height: 200px;
     width: 300px;
-    position: relative;
     align-items: center;
     border-radius: 10px 010px 00px 00px
 }
 .subtitulo{
     margin: 0px;
-    position: relative;
-    align-items: center;
+    display: flex;
+    align-items: normal;
+    justify-content: left;
     width: 300px;
-    height: 50px;
+    height: 30px;
     background-color: white;
     color: black;
     text-shadow: 1px 1px 3px darkgray;
     font-size: 25px;
     
 }
-.descricao{
+.descricao{ 
+    display: flex;
+    align-items: normal;
+    justify-content: left;
     background-color: white;
     font-size: 20px;
     color: rgba(0, 0, 0, 0.562);
+}
+#corpoBlog{
+    padding-bottom: 20px;
+    width: 100%;
+    height: 700px;
+
+}
+#paginaBlog{
+    margin: auto;
+    width: 95%;
+    height: 100%;
+}
+.botaoInicio{
+    margin: 1px;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+}
+#conteudoBlog{
+    margin-top: 10px;
+    height: 85%;
+    width: 100%;
+    margin: auto;
+}
+#footer{
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    padding-top: 10px;
 }
