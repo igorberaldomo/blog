@@ -4,7 +4,7 @@ let initialNumber = 0;
 let loadnumber = 8;
 let postsDisplay = posts;
 
-loadPagina(initialNumber,posts);
+loadPagina(initialNumber,postsDisplay);
 
 function selectHandler(categoria) {
   filtrarCategorias(categoria);
