@@ -7,7 +7,7 @@ const posts = [
     text: "",
     acessed: 0,
     date: "12/12/2004",
-    categoria: "linguagens",
+    category: "linguagens",
   },
   {
     id: 1,
@@ -16,8 +16,8 @@ const posts = [
     subtitle: "Linguagem de marcação HTML5",
     text: "",
     acessed: 0,
-    date: "12/12/2004",
-    categoria: "linguagens",
+    date: "12/04/2004",
+    category: "linguagens",
   },
   {
     id: 2,
@@ -26,8 +26,8 @@ const posts = [
     subtitle: "A beleza do css",
     text: "",
     acessed: 0,
-    date: "12/12/2004",
-    categoria: "linguagens",
+    date: "21/04/2004",
+    category: "linguagens",
   },
   {
     id: 3,
@@ -36,8 +36,8 @@ const posts = [
     subtitle: "Javascript",
     text: "",
     acessed: 0,
-    date: "12/12/2004",
-    categoria: "linguagens",
+    date: "12/12/2005",
+    category: "linguagens",
   },
   {
     id: 4,
@@ -46,8 +46,8 @@ const posts = [
     subtitle: "Curso de desenvolvedor",
     text: "",
     acessed: 0,
-    date: "12/12/2004",
-    categoria: "linguagens",
+    date: "12/12/2015",
+    category: "linguagens",
   },
   {
     id: 5,
@@ -56,8 +56,8 @@ const posts = [
     subtitle: "Pcs para progamar o que procurar?",
     text: "",
     acessed: 0,
-    date: "12/12/2004",
-    categoria: "produtos",
+    date: "06/06/2016",
+    category: "produtos",
   },
   {
     id: 6,
@@ -66,8 +66,8 @@ const posts = [
     subtitle: "Lógica de programação",
     text: "",
     acessed: 0,
-    date: "12/12/2004",
-    categoria: "linguagens",
+    date: "28/02/2016",
+    category: "linguagens",
   },
   {
     id: 7,
@@ -76,8 +76,8 @@ const posts = [
     subtitle: "Revisão de 200 cadeira de escritório",
     text: "",
     acessed: 0,
-    date: "12/12/2004",
-    categoria: "produtos",
+    date: "12/10/2023",
+    category: "produtos",
   },
 ];
 export default posts;
