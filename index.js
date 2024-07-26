@@ -23,19 +23,14 @@ function filtrarCategorias(categoria) {
 }
 
 function loadPagina(initialNumber,  postsDisplay) {
-
-  cardline.innerHTML = "";
-  blog.innerHTML = "";
+    cardline.innerHTML = "";
+    blog.innerHTML = "";
 
   for (let i = initialNumber; i < loadnumber; i++) {
     try {
-      let card = ` <button class="invisibleButton" onclick="displayBlog(${
-        postsDisplay[i].id
-      })">
+      let card = ` <button class="invisibleButton" onclick="displayBlog(${postsDisplay[i].id})">
                 <div class="blogCard">
-                    <img src="./images/${postsDisplay[i].picture}" class="img" id="${[
-        i,
-      ]}" />
+                    <img src="./images/${postsDisplay[i].picture}" class="img" id="img${[i]}" />
                     <h3 class="titulo">
                         ${postsDisplay[i].title}
                     </h3>
@@ -56,7 +51,7 @@ function loadPagina(initialNumber,  postsDisplay) {
 function displayBlog(i) {
   updateAcessed(i);
   let blog = window.document.getElementById("paginaBlog");
-  document.getElementById("cardline").style.width= imgWidth + "px"
+  document.getElementById("cardline").style.height= "0px"
   let informaçãoBlog = `
             <div id="conteudoBlog">
                 <h1>${postsDisplay[i].subtitle}</h1>

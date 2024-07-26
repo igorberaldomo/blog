@@ -110,12 +110,12 @@ height: 700px;
     margin: auto;
     height: 700px;
 }
-#botaoInicio{
 
-background-color: blue;
-color: yellow;
-}
 #botaoFinal{
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 120px;
     background-color: blue;
     color: yellow;
 }
