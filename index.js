@@ -1,5 +1,6 @@
 import posts from "./Posts/posts.js";
 let blog = window.document.getElementById("paginaBlog");
+let cardline = document.getElementById("cardline");
 let initialNumber = 0;
 let loadnumber = 8;
 let postsDisplay = posts;
@@ -22,7 +23,7 @@ function filtrarCategorias(categoria) {
 }
 
 function loadPagina(initialNumber,  postsDisplay) {
-  let cardline = document.getElementById("cardline");
+
   cardline.innerHTML = "";
   blog.innerHTML = "";
 
@@ -38,12 +39,12 @@ function loadPagina(initialNumber,  postsDisplay) {
                     <h3 class="titulo">
                         ${postsDisplay[i].title}
                     </h3>
-                    <p>categoria:${postsDisplay[i].category} </p>
+                    <p class="infoCards"> acessos: ${postsDisplay[i].acessed} - publicado:${postsDisplay[i].date}</p>
+                    <p class="categoria" >categoria:${postsDisplay[i].category} </p>
                     <p class="descricao">
                         ${postsDisplay[i].text.slice(0, 200)}
                     </p>
-                    <p>acessos:${postsDisplay[i].acessed}</p>
-                    <p>upload:${postsDisplay[i].date}</p>
+                    
 
                 </div>
             </button>`;
@@ -55,9 +56,9 @@ function loadPagina(initialNumber,  postsDisplay) {
 function displayBlog(i) {
   updateAcessed(i);
   let blog = window.document.getElementById("paginaBlog");
+  document.getElementById("cardline").style.width= imgWidth + "px"
   let informaçãoBlog = `
             <div id="conteudoBlog">
-                <button id="botaoInicio" onclick="voltarPagina()">pagina inicial</button>
                 <h1>${postsDisplay[i].subtitle}</h1>
                 <p>
                 ${postsDisplay[i].text}
