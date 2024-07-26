@@ -4,12 +4,12 @@ let initialNumber = 0;
 let loadnumber = 8;
 let postsDisplay = posts;
 
-loadPagina(initialNumber, 0);
+loadPagina(initialNumber,posts);
 
 function selectHandler(categoria) {
   filtrarCategorias(categoria);
   console.log(postsDisplay);
-  loadPagina(initialNumber, 0, postsDisplay);
+  loadPagina(initialNumber, postsDisplay);
 }
 function filtrarCategorias(categoria) {
   if (categoria != "none") {
@@ -21,9 +21,8 @@ function filtrarCategorias(categoria) {
   }
 }
 
-function loadPagina(initialNumber, add, postsDisplay) {
+function loadPagina(initialNumber,  postsDisplay) {
   let cardline = document.getElementById("cardline");
-  loadnumber = loadnumber + add;
   cardline.innerHTML = "";
   blog.innerHTML = "";
 
@@ -33,18 +32,18 @@ function loadPagina(initialNumber, add, postsDisplay) {
         postsDisplay[i].id
       })">
                 <div class="blogCard">
-                    <img src="./images/${posts[i].picture}" class="img" id="${[
+                    <img src="./images/${postsDisplay[i].picture}" class="img" id="${[
         i,
       ]}" />
                     <h3 class="titulo">
-                        ${posts[i].title}
+                        ${postsDisplay[i].title}
                     </h3>
-                    <p>categoria:${posts[i].category} </p>
+                    <p>categoria:${postsDisplay[i].category} </p>
                     <p class="descricao">
-                        ${posts[i].text.slice(0, 200)}
+                        ${postsDisplay[i].text.slice(0, 200)}
                     </p>
-                    <p>acessos:${posts[i].acessed}</p>
-                    <p>upload:${posts[i].date}</p>
+                    <p>acessos:${postsDisplay[i].acessed}</p>
+                    <p>upload:${postsDisplay[i].date}</p>
 
                 </div>
             </button>`;
@@ -59,9 +58,9 @@ function displayBlog(i) {
   let informaçãoBlog = `
             <div id="conteudoBlog">
                 <button id="botaoInicio" onclick="voltarPagina()">pagina inicial</button>
-                <h1>${posts[i].subtitle}</h1>
+                <h1>${postsDisplay[i].subtitle}</h1>
                 <p>
-                ${posts[i].text}
+                ${postsDisplay[i].text}
                 </p>
                  <button id="botaoFinal" onclick="voltarPagina()">pagina inicial</button>
             </div>`;
@@ -72,7 +71,7 @@ function displayBlog(i) {
 function voltarPagina() {
   blog.innerHTML = "";
   initialNumber = 0;
-  loadPagina(initialNumber, 0);
+  loadPagina(initialNumber, posts);
 }
 
 window.displayBlog = displayBlog;
