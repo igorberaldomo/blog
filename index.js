@@ -1,17 +1,14 @@
 import posts from "./Posts/posts.js";
-let post = window.document.getElementById("paginaPost");
-let cardline = document.getElementById("cardline");
-let initialNumber = 0;
-let loadnumber = 8;
+let content = window.document.getElementById("loadContent");
 let postsDisplay = posts;
 let clickedPosition = [0, 0, 0, 0, 0, 0, 0, 0]
 
-loadPagina(initialNumber, postsDisplay);
+loadPagina(postsDisplay);
 
 function selectHandler(categoria) {
   filtrarCategorias(categoria);
   console.log(postsDisplay);
-  loadPagina(initialNumber, postsDisplay);
+  loadPagina(postsDisplay);
 }
 function filtrarCategorias(categoria) {
   if (categoria != "todos") {
@@ -23,11 +20,11 @@ function filtrarCategorias(categoria) {
   }
 }
 
-function loadPagina(initialNumber, postsDisplay) {
-  cardline.innerHTML = "";
-  post.innerHTML = "";
+
+function loadPagina(postsDisplay) {
+  content.innerHTML = "";
   document.getElementById("selectLine").style.display = "flex"
-  for (let i = initialNumber; i < loadnumber; i++) {
+  for (let i = 0; i < 7; i++) {
     try {
       let card = ` <button class="invisibleButton" onclick="displayPost(${postsDisplay[i].id})">
                 <div class="blogCard">
@@ -42,31 +39,31 @@ function loadPagina(initialNumber, postsDisplay) {
                     </p>
                 </div>
             </button>`;
-      cardline.innerHTML += card;
+      content.innerHTML += card;
     } catch (error) { }
   }
 }
 
 function displayPost(i) {
   clickedPosition[i]++
-  document.getElementById("cardline").style.height = "0px"
   document.getElementById("selectLine").style.display = "none"
   let informaçãoPost = `
             <div id="conteudoPosts">
+            <img src="./images/${postsDisplay[i].picture}" class="postImage" id="img${[i]}" />
                 <h1>${postsDisplay[i].subtitle}</h1>
                 <p>
                 ${postsDisplay[i].text}
+                ${postsDisplay[i].text.slice(0, 1400)}
                 </p>
                  <button id="botaoFinal" onclick="voltarPagina()">pagina inicial</button>
             </div>`;
 
-  cardline.innerHTML = "";
-  post.innerHTML += informaçãoPost;
+  content.innerHTML = "";
+  content.innerHTML += informaçãoPost;
 }
 function voltarPagina() {
-  post.innerHTML = "";
-  initialNumber = 0;
-  loadPagina(initialNumber, posts,);
+  content.innerHTML = "";
+  loadPagina(posts);
 }
 
 window.displayPost = displayPost;
