@@ -28,7 +28,7 @@ justify-content: space-between;
 background-color: blue;
 color: white;
 text-shadow: 1px 1px 3px black;
-box-shadow: -1px 1px 1px black;
+box-shadow: 1px 1px 1px black;
 }
 #itemBox{
     display: flex;
@@ -151,7 +151,11 @@ margin: 0px;
     padding: 10px;
 }
 #footer{
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12px;
+    padding: 4px;
     position: fixed;
     background-color: black;
     color: white;
@@ -159,6 +163,51 @@ margin: 0px;
     margin: auto;
     bottom: 0;
 }
+#footer p{
+    color: white;
+    margin: 10px;
+}
 #footer a{
     color: blue;
+}
+@media(width < 1500px){
+    #cardline{
+        width: 1200px
+    }
+    #paginaBlog{
+        width: 1100px;
+    }
+}
+@media(width < 900px){
+    #cardline{
+        width: 800px
+    }
+    #paginaBlog{
+        height: 900px;
+        width: 900px;
+    }
+    #footer{
+        height: 25px;
+        padding: 2px;
+        font-size: 14px;
+        width: 100%;
+   }
+}
+@media(width < 500px){
+    #cardline{
+        width: 400px
+    }
+    #paginaBlog{
+        height: 1200px;
+        width: 300px;
+
+    }
+    #footer{ 
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        padding: 2px;
+        font-size: 12px;
+        width: 100%;
+    }
 }
