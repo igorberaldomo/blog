@@ -1,5 +1,5 @@
 import posts from "./Posts/posts.js";
-let blog = window.document.getElementById("paginaBlog");
+let post = window.document.getElementById("paginaPost");
 let cardline = document.getElementById("cardline");
 let initialNumber = 0;
 let loadnumber = 8;
@@ -25,10 +25,10 @@ function filtrarCategorias(categoria) {
 
 function loadPagina(initialNumber,  postsDisplay) {
     cardline.innerHTML = "";
-    blog.innerHTML = "";
+    post.innerHTML = "";
   for (let i = initialNumber; i < loadnumber; i++) {
     try {
-      let card = ` <button class="invisibleButton" onclick="displayBlog(${postsDisplay[i].id})">
+      let card = ` <button class="invisibleButton" onclick="displayPost(${postsDisplay[i].id})">
                 <div class="blogCard">
                     <img src="./images/${postsDisplay[i].picture}" class="img" id="img${[i]}" />
                     <h3 class="titulo">
@@ -46,12 +46,11 @@ function loadPagina(initialNumber,  postsDisplay) {
   }
 }
 
-function displayBlog(i) {
+function displayPost(i) {
     clickedPosition[i]++
-    let blog = window.document.getElementById("paginaBlog");
     document.getElementById("cardline").style.height= "0px"
-    let informaçãoBlog = `
-            <div id="conteudoBlog">
+    let informaçãoPost = `
+            <div id="conteudoPosts">
                 <h1>${postsDisplay[i].subtitle}</h1>
                 <p>
                 ${postsDisplay[i].text}
@@ -60,15 +59,15 @@ function displayBlog(i) {
             </div>`;
 
   cardline.innerHTML = "";
-  blog.innerHTML += informaçãoBlog;
+  post.innerHTML += informaçãoPost;
 }
 function voltarPagina() {
-  blog.innerHTML = "";
+  post.innerHTML = "";
   initialNumber = 0;
   loadPagina(initialNumber, posts,);
 }
 
-window.displayBlog = displayBlog;
+window.displayPost = displayPost;
 window.voltarPagina = voltarPagina;
 window.selectHandler = selectHandler;
 function updateAcessed() {}

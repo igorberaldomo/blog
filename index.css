@@ -1,36 +1,40 @@
-body{
+body {
     margin: 0px;
     padding: 0px;
     text-decoration: none;
 }
-#logo{
-    width: 90px;
 
+#logo {
+    width: 90px;
 }
-#tituloBanner{
+
+#tituloBanner {
     padding-left: 10px;
 }
-#marca{
+
+#marca {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 500px;
 }
-#banner{
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-width: 100%;
-height: 100px;
-margin: 0px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-background-color: blue;
-color: white;
-text-shadow: 1px 1px 3px black;
-box-shadow: 1px 1px 1px black;
+
+#banner {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 1px black;
 }
-#itemBox{
+
+#itemBox {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,38 +43,54 @@ box-shadow: 1px 1px 1px black;
     height: 100px;
     font-size: 20px;
 }
-#corpoCards{
- background-color: white;
- width: 100%;
- height: 100%;
+#categoriasBox{
+    display: flex;
+    align-items: normal;
+    justify-content: left;
 }
-.invisibleButton{
+
+#categoriaSelect {
+    margin: 0px;
+    display: flex;
+    align-items: normal;
+    justify-content: left;
+    font-size: 10px;
+}
+#corpoCards {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.invisibleButton {
     border: none;
     height: 400px;
     width: 300px;
     background-color: white;
     margin: 40px;
 }
-#cardline{
-    width: 1600px;
-    height: 600px;
-    margin: 10px auto;
+
+#cardline {
+    width: 1800px;
+    height: 800px;
+    margin: 20px auto;
     align-items: center;
     justify-content: center;
 
 }
-.blogCard{
-    height: 450px;
+
+.blogCard {
+    height: 420px;
     width: 300px;
     flex-direction: column;
     display: flex;
-    position: relative;
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 1px 4px black;
 
 }
-.img{
+
+.img {
     border-bottom: 1px solid rgba(0, 0, 0, 0.192);
     display: flex;
     height: 200px;
@@ -78,7 +98,8 @@ box-shadow: 1px 1px 1px black;
     align-items: center;
     border-radius: 10px 010px 00px 00px
 }
-.titulo{
+
+.titulo {
     margin: 0px;
     margin-left: 4px;
     display: flex;
@@ -91,14 +112,16 @@ box-shadow: 1px 1px 1px black;
     text-shadow: 1px 1px 3px darkgray;
     font-size: 20px;
 }
-.categoria{
+
+.categoria {
     margin: 4px;
     display: flex;
     align-items: normal;
     justify-content: left;
     font-size: 12px;
 }
-.infoCards{
+
+.infoCards {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -106,7 +129,8 @@ box-shadow: 1px 1px 1px black;
     margin: 4px;
 
 }
-.descricao{ 
+
+.descricao {
     margin: 4px;
     display: flex;
     align-items: center;
@@ -116,18 +140,19 @@ box-shadow: 1px 1px 1px black;
     color: rgba(0, 0, 0, 0.562);
 }
 
-#corpoBlog{
-width: 100%;
-height: 700px;
+#corpoPost {
+    width: 100%;
+    height: 700px;
 }
-#paginaBlog{
+
+#paginaPost {
     display: flex;
     margin: auto;
     height: 700px;
     width: 1400px;
 }
 
-#botaoFinal{
+#botaoFinal {
     margin-top: 10px;
     border: none;
     border-radius: 10px;
@@ -137,20 +162,23 @@ height: 700px;
     font-weight: 600;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: blue;
-    color: yellow;
+    color: white;
 }
-.info{
-margin: 0px;
+
+.info {
+    margin: 0px;
     font-size: 20px;
     display: flex;
     padding: 0px;
 }
-#conteudoBlog{
+
+#conteudoPosts {
     height: 700px;
     width: 95%;
     padding: 10px;
 }
-#footer{
+
+#footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,51 +191,106 @@ margin: 0px;
     margin: auto;
     bottom: 0;
 }
-#footer p{
+
+#footer p {
     color: white;
     margin: 10px;
 }
-#footer a{
+
+#footer a {
     color: blue;
 }
-@media(width < 1500px){
-    #cardline{
-        width: 1200px
+
+
+@media(width > 1800px) {
+    #cardline {
+        width: 1600px;
     }
-    #paginaBlog{
+
+    #paginaPost {
         width: 1100px;
     }
 }
-@media(width < 900px){
-    #cardline{
-        width: 800px
+@media(width < 1500px) {
+    #cardline {
+        width: 1200px
     }
-    #paginaBlog{
+
+    #paginaPost {
+        width: 1100px;
+    }
+}
+
+@media(width < 1100px) {
+    #marca {
+        margin: 0px;
+        width: 400px;
+    }
+
+    #banner {
+        width: 100%;
+        height: 60px;
+    }
+
+    #itemBox {
+        width: 400px;
+        height: 100px;
+        font-size: 12px;
+    }
+
+    #logo {
+        margin-right: 5px;
+        width: 50px;
+    }
+
+    #tituloBanner {
+        font-size: 20px;
+    }
+
+    #cardline {
+        width: 800px;
+        height: 1100px;
+    }
+
+    #paginaPost {
         height: 900px;
         width: 900px;
     }
-    #footer{
+
+    #footer {
         height: 25px;
         padding: 2px;
         font-size: 14px;
         width: 100%;
-   }
-}
-@media(width < 500px){
-    #cardline{
-        width: 400px
     }
-    #paginaBlog{
-        height: 1200px;
-        width: 300px;
+}
+
+@media(width < 900px) {
+    #banner {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #cardline {
+        width: 400px;
 
     }
-    #footer{ 
+
+    #pagina {
+        height: 1200px;
+        width: 300px;
+    }
+
+    #footer {
         display: flex;
         flex-direction: row;
         height: 35px;
         padding: 2px;
         font-size: 12px;
         width: 100%;
+    }
+
+    .pages {
+        display: none;
     }
 }
