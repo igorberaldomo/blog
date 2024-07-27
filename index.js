@@ -4,9 +4,9 @@ let cardline = document.getElementById("cardline");
 let initialNumber = 0;
 let loadnumber = 8;
 let postsDisplay = posts;
-let clickedPosition = [ 0,0,0,0,0,0,0,0]
+let clickedPosition = [0, 0, 0, 0, 0, 0, 0, 0]
 
-loadPagina(initialNumber,postsDisplay);
+loadPagina(initialNumber, postsDisplay);
 
 function selectHandler(categoria) {
   filtrarCategorias(categoria);
@@ -14,7 +14,7 @@ function selectHandler(categoria) {
   loadPagina(initialNumber, postsDisplay);
 }
 function filtrarCategorias(categoria) {
-  if (categoria != "none") {
+  if (categoria != "todos") {
     postsDisplay = posts.filter((post) => {
       return post.category == categoria;
     });
@@ -23,9 +23,10 @@ function filtrarCategorias(categoria) {
   }
 }
 
-function loadPagina(initialNumber,  postsDisplay) {
-    cardline.innerHTML = "";
-    post.innerHTML = "";
+function loadPagina(initialNumber, postsDisplay) {
+  cardline.innerHTML = "";
+  post.innerHTML = "";
+  document.getElementById("selectLine").style.display = "flex"
   for (let i = initialNumber; i < loadnumber; i++) {
     try {
       let card = ` <button class="invisibleButton" onclick="displayPost(${postsDisplay[i].id})">
@@ -42,14 +43,15 @@ function loadPagina(initialNumber,  postsDisplay) {
                 </div>
             </button>`;
       cardline.innerHTML += card;
-    } catch (error) {}
+    } catch (error) { }
   }
 }
 
 function displayPost(i) {
-    clickedPosition[i]++
-    document.getElementById("cardline").style.height= "0px"
-    let informaçãoPost = `
+  clickedPosition[i]++
+  document.getElementById("cardline").style.height = "0px"
+  document.getElementById("selectLine").style.display = "none"
+  let informaçãoPost = `
             <div id="conteudoPosts">
                 <h1>${postsDisplay[i].subtitle}</h1>
                 <p>
@@ -70,4 +72,4 @@ function voltarPagina() {
 window.displayPost = displayPost;
 window.voltarPagina = voltarPagina;
 window.selectHandler = selectHandler;
-function updateAcessed() {}
+
