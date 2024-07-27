@@ -7,7 +7,6 @@ loadPagina(postsDisplay);
 
 function selectHandler(categoria) {
   filtrarCategorias(categoria);
-  console.log(postsDisplay);
   loadPagina(postsDisplay);
 }
 function filtrarCategorias(categoria) {
@@ -24,7 +23,7 @@ function filtrarCategorias(categoria) {
 function loadPagina(postsDisplay) {
   content.innerHTML = "";
   document.getElementById("selectLine").style.display = "flex"
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 6; i++) {
     try {
       let card = ` <button class="invisibleButton" onclick="displayPost(${postsDisplay[i].id})">
                 <div class="blogCard">
